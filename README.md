@@ -78,7 +78,6 @@ time-series-demand-forecasting/
 ├── app.py
 ├── README.md
 ├── requirements.txt
-├── requirements-notebooks.txt
 ├── .gitignore
 ├── data/
 │   └── processed/
@@ -125,7 +124,7 @@ python -m streamlit run app.py
 
 Open the local URL printed in the terminal, normally `http://localhost:8501`.
 
-To work through the notebooks, install their additional packages with `python -m pip install -r requirements-notebooks.txt`. The EDA and feature-engineering stages also require the local transaction data described above. Keep the notebook working directory inside `notebooks/` so their `../data/` paths resolve correctly.
+The same `requirements.txt` installs packages for both the app and the notebooks. The EDA and feature-engineering stages also require the local transaction data described above. Keep the notebook working directory inside `notebooks/` so their `../data/` paths resolve correctly.
 
 Only load pickle files you trust: unpickling can execute Python code. The app loads the fixed model file included in this repository and does not accept uploaded models.
 
@@ -135,7 +134,7 @@ Only load pickle files you trust: unpickling can execute Python code. The app lo
 2. Create an app from `PIYUSH-SHARMA-2004/time-series-demand-forecasting`.
 3. Select branch **main** and entrypoint **app.py**.
 4. In **Advanced settings**, select **Python 3.13**.
-5. Deploy. Community Cloud installs the pinned packages from the root `requirements.txt`.
+5. Deploy. Community Cloud installs the packages from the root `requirements.txt`.
 
 The app runs on the hosting service while your laptop is off. Free Community Cloud apps sleep after 12 hours without traffic, and visitors can wake them. See the official [deployment instructions](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy) and [app hibernation details](https://docs.streamlit.io/deploy/streamlit-community-cloud/manage-your-app).
 
