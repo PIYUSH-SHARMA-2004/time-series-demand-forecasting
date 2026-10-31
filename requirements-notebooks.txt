@@ -1,6 +1,0 @@
--r requirements.txt
-matplotlib
-seaborn
-statsmodels
-jupyter
-ipykernel
