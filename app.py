@@ -9,9 +9,8 @@ st.set_page_config(page_title="Ecommerce Purchase Forecast", layout="wide")
 st.title("Ecommerce Purchase Forecast")
 st.write("Weekly purchased units across all categories and sales channels.")
 
-# app.py is inside notebooks; the project folder is one level above it.
-notebooks_folder = os.path.dirname(os.path.abspath(__file__))
-project_folder = os.path.dirname(notebooks_folder)
+# Find the files relative to app.py, on this computer or on Community Cloud.
+project_folder = os.path.dirname(os.path.abspath(__file__))
 model_path = os.path.join(project_folder, "models", "demand_forecast.pkl")
 weekly_path = os.path.join(project_folder, "data", "processed", "weekly_target.csv")
 
