@@ -75,6 +75,7 @@ The forest uses 200 trees, `max_depth=3`, `min_samples_leaf=20`, and `random_sta
 
 ```text
 time-series-demand-forecasting/
+├── app.py
 ├── README.md
 ├── requirements.txt
 ├── requirements-notebooks.txt
@@ -86,7 +87,6 @@ time-series-demand-forecasting/
 ├── models/
 │   └── demand_forecast.pkl
 └── notebooks/
-    ├── app.py
     ├── EDA.ipynb
     ├── Feature_engineering.ipynb
     └── Modeling.ipynb
@@ -120,7 +120,7 @@ Install the app packages and start Streamlit:
 
 ```bash
 python -m pip install -r requirements.txt
-python -m streamlit run notebooks/app.py
+python -m streamlit run app.py
 ```
 
 Open the local URL printed in the terminal, normally `http://localhost:8501`.
@@ -133,7 +133,7 @@ Only load pickle files you trust: unpickling can execute Python code. The app lo
 
 1. Sign in at [Streamlit Community Cloud](https://share.streamlit.io/) and connect GitHub.
 2. Create an app from `PIYUSH-SHARMA-2004/time-series-demand-forecasting`.
-3. Select branch **main** and entrypoint **notebooks/app.py**.
+3. Select branch **main** and entrypoint **app.py**.
 4. In **Advanced settings**, select **Python 3.13**.
 5. Deploy. Community Cloud installs the pinned packages from the root `requirements.txt`.
 
